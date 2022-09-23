@@ -1,0 +1,20 @@
+{
+  "name": "world-of-sheep",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@types/three": "^0.144.0",
+    "three": "^0.144.0",
+    "three-stdlib": "^2.14.2",
+    "keyboard-ts": "^1.2.5"
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background: #d3dfdd;
+}
+div#smoke {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 30vh;
+  background-image: linear-gradient(
+    rgba(211, 223, 221, 0) 0%,
+    rgba(211, 223, 221, 0.8) 65%
+  );
+}
