@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { createGround } from './ground';
-import { createStones } from './stones';
+import { createStones, createOtherStone } from './stones';
 import { createTrees } from './trees';
 import { createSheep } from './sheep';
 import { createFence } from './fence';
@@ -16,7 +16,7 @@ function createEntities(scene, theCanvas) {
   createTrees(scene);        // À compléter
   createSheep(scene, theCanvas);        // À compléter
 
-  // createOtherStone(scene);   // À créer - Ajoute un rocher de taille intermédiaire
+  createOtherStone(scene);   // À créer - Ajoute un rocher de taille intermédiaire
   // createOtherTree(scene);    // À créer - Ajoute un arbre à 3 branches
   // createOtherSheep(scene);   // À créer - Ajoute un mouton debout !
 

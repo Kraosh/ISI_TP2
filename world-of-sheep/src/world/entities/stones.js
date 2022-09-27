@@ -23,5 +23,22 @@ function createStones(scene) {
 
 
   }
+  function createOtherStone(scene) {
+    console.log('Création des pierres');
 
-  export { createStones };
+    const pi = Math.PI;
+    const geo_stone = new THREE.DodecahedronGeometry(1, 0);
+    const stone = new THREE.Mesh(geo_stone, mat_stone);
+    scene.add(stone);
+    stone.castShadow = true;
+    
+    stone.rotation.set(0, 12, pi / 2);
+    stone.scale.set(2, 1.5, 1);
+    stone.position.set(-1, 1, 4.6);
+
+
+
+  }
+  
+
+  export { createStones, createOtherStone };
