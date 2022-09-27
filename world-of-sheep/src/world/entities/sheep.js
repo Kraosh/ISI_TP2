@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { mat_dark, mat_grey } from './materials'
 
-function createSheep(scene) {
+function createSheep(scene, theCanvas) {
     console.log('Création du mouton');
   
     const pi = Math.PI;
@@ -113,6 +113,21 @@ function createSheep(scene) {
       eyes[i].position.z + 0.02
     );
   }
+  //mouse control
+  const context = theCanvas.getContext("2d");
+  theCanvas.addEventListener("mousemove", function (evt) {
+    const rect = theCanvas.getBoundingClientRect();
+    const mouseX = evt.clientX - rect.left;
+    const mouseY = evt.clientY - rect.top;
+
+    const offsetX = 0.2 / rect.width * (mouseX - rect.width / 2);
+    // const offsetY = 0.001 * (mouseY - h / 2);
+    const offsetY = 0.3 / rect.height * (mouseY - (rect.height * 2) / 5);
+    eyeballs[0].position.x = eyes[0].position.x + offsetX;
+    eyeballs[0].position.y = eyes[0].position.y - offsetY;
+    eyeballs[1].position.x = eyes[1].position.x + offsetX;
+    eyeballs[1].position.y = eyes[1].position.y - offsetY;
+  });
   
 
   sheep.position.set(4.8, -0.2, -1);
